@@ -1,4 +1,5 @@
 from _Functions import slow_print
+from _Functions import end_day
 
 def start_day():
     slow_print("You wake up to your alarm. It's time to start your day as a programmer!")
@@ -39,17 +40,8 @@ def bug_fix():
     else:
         slow_print("Oh no, now things are worse than before!")
         return -15
-
-def end_day(score):
-    slow_print("The day is over. Let's see how you did...")
-    if score > 30:
-        slow_print("You had a super productive day! Time to relax.")
-    elif score > 0:
-        slow_print("Not bad! A solid day of coding.")
-    else:
-        slow_print("Rough day...but there's always tomorrow!")
     
-if __name__ == "__main__":
+def run():
     score = 0
     score += start_day()
     score += breakfast()
