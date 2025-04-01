@@ -40,11 +40,37 @@ def bug_fix():
     else:
         slow_print("Oh no, now things are worse than before!")
         return -15
-    
+
+def lunch():
+    slow_print("Time for lunch! Do you eat healthy?")
+    choice = input("Do you: \n1. Yes \n2. No\n> ")
+    if choice == "1":
+        slow_print("Good choice! Your brain will thank you later.")
+        return 15
+    else:
+        slow_print("Crunchy food is great, but you're running on fumes.")
+        return -5
+
+def meeting():
+    slow_print("Time for a meeting! What do you talk about?")
+    choice = input("Do you: \n1. Current project \n2. Personal issues\n> ")
+    if choice == "1":
+        slow_print("Great choice! Your brain will thank you later.")
+        return 15
+    else:
+        slow_print("You're running on fumes, but your brain is grateful.")
+        return -5
+
 def run():
     score = 0
     score += start_day()
     score += breakfast()
+    score += meeting()
     score += coding_session()
     score += bug_fix()
-    end_day(score)
+    score += lunch()
+    score += coding_session()
+    score += bug_fix()
+    score += coding_session()
+    score += bug_fix()
+    return score
