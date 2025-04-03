@@ -73,4 +73,4 @@ def run():
     score += bug_fix()
     score += coding_session()
     score += bug_fix()
-    return score
+    end_day(score)
